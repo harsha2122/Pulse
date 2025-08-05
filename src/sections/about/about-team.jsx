@@ -28,20 +28,22 @@ export function AboutTeam() {
     <Container component={MotionViewport} sx={{ textAlign: 'center', py: { xs: 10, md: 15 } }}>
       <m.div variants={varFade().inDown}>
         <Typography variant="overline" sx={{ color: 'text.disabled' }}>
-          Dream team
+          Our Proffesionals
         </Typography>
       </m.div>
 
       <m.div variants={varFade().inUp}>
         <Typography variant="h2" sx={{ my: 3 }}>
-          Great team is the key
+          Our Team Is Our Strength
         </Typography>
       </m.div>
 
       <m.div variants={varFade().inUp}>
-        <Typography sx={{ mx: 'auto', maxWidth: 640, color: 'text.secondary' }}>
-          Minimal will provide you support if you have any problems, our support team will reply
-          within a day and we also have detailed documentation.
+        <Typography sx={{ mx: 'auto', maxWidth: 690, color: 'text.secondary' }}>
+          &quot; From skilled surgeons to caring staff, every member brings dedication to your
+          healing.&quot; <br />
+          &quot;Together, we ensure every patient feels safe, heard, and cared for — every step of
+          the way.&quot;
         </Typography>
       </m.div>
 

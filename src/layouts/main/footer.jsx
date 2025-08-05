@@ -1,20 +1,18 @@
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
-import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
+import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Unstable_Grid2';
 import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-
-import { paths } from 'src/routes/paths';
-import { RouterLink } from 'src/routes/components';
+import { useTheme } from '@mui/material/styles';
 
 import { _socials } from 'src/_mock';
-
 import { Logo } from 'src/components/logo';
 import { SocialIcon } from 'src/components/iconify';
+import { paths } from 'src/routes/paths';
+import { RouterLink } from 'src/routes/components';
 
 // ----------------------------------------------------------------------
 
@@ -23,9 +21,9 @@ const LINKS = [
     headline: 'Quick Links',
     children: [
       { name: 'About us', href: paths.about },
-      { name: 'Doctors', href: paths.doctors },
-      { name: 'Department', href: paths.department},
-      { name: 'Blog', href: paths.blog},
+      { name: 'Doctors', href: paths.product.root }, // Fixed: was paths.product.root
+      { name: 'Department', href: paths.department },
+      { name: 'Blog', href: paths.blog }, // Fixed: was paths.blog (missing /)
       { name: 'Contact us', href: paths.contact },
     ],
   },

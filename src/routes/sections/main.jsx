@@ -18,6 +18,8 @@ const ServiceDetailPage = lazy(() => import('src/pages/service/details'));
 const ProductListPage = lazy(() => import('src/pages/product/list'));
 const ProductDetailsPage = lazy(() => import('src/pages/product/details'));
 const ProductCheckoutPage = lazy(() => import('src/pages/product/checkout'));
+
+const DepartmentPage = lazy(() => import('src/pages/product/department-list'));
 // Blog
 const PostListPage = lazy(() => import('src/pages/post/list'));
 const PostDetailsPage = lazy(() => import('src/pages/post/details'));
@@ -60,6 +62,14 @@ export const mainRoutes = [
           {
             path: 'blank',
             element: <BlankPage />,
+          },
+          {
+            path: 'department',
+            children: [
+              { element: <DepartmentPage />, index: true },
+              { path: 'list', element: <DepartmentPage /> },
+              { path: ':id', element: <ProductListPage /> },
+            ],
           },
           {
             path: 'product',

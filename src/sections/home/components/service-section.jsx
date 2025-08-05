@@ -59,7 +59,7 @@ export function ServicesSection({ sx, ...other }) {
   const renderDescription = (
     <>
       <Typography />
-      <Grid sx={{ ml: 1 }} container spacing={4}>
+      <Grid sx={{ ml: 1 }} container spacing={0}>
         {services.map((svc) => (
           <Grid key={svc.title} item xs={12} sm={6} md={4}>
             <Card

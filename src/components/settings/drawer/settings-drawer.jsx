@@ -31,8 +31,8 @@ export function SettingsDrawer({
   hidePresets,
   hideNavColor,
   hideContrast,
-  hideNavLayout,
-  hideDirection,
+  // hideNavLayout,
+  // hideDirection,
   hideColorScheme,
 }) {
   const theme = useTheme();
@@ -144,7 +144,7 @@ export function SettingsDrawer({
         layouts: ['vertical', 'horizontal', 'mini'],
       }}
       hideNavColor={hideNavColor}
-      hideNavLayout={hideNavLayout}
+      // hideNavLayout={hideNavLayout}
     />
   );
 
@@ -180,12 +180,12 @@ export function SettingsDrawer({
           <Box gap={2} display="grid" gridTemplateColumns="repeat(2, 1fr)">
             {!hideColorScheme && renderMode}
             {!hideContrast && renderContrast}
-            {!hideDirection && renderRTL}
-            {!hideCompact && renderCompact}
+            {/* {!hideDirection && renderRTL} */}
+            {/* {!hideCompact && renderCompact} */}
           </Box>
-          {!(hideNavLayout && hideNavColor) && renderNav}
+          {/* {!(hideNavLayout && hideNavColor) && renderNav} */}
           {/* {!hidePresets && renderPresets} */}
-          {!hideFont && renderFont}
+          {/* {!hideFont && renderFont} */}
         </Stack>
       </Scrollbar>
     </Drawer>

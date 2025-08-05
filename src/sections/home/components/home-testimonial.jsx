@@ -2,7 +2,7 @@ import { m } from 'framer-motion';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Avatar from '@mui/material/Avatar';
+// import Avatar from '@mui/material/Avatar';
 import Rating from '@mui/material/Rating';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
@@ -57,9 +57,9 @@ export function HomeTestimonials({ sx, ...other }) {
 
   const renderDescription = (
     <SectionTitle
-      caption="testimonials"
-      title="Rumors are flying"
-      txtGradient="that..."
+      caption="Reviews"
+      title="What Our Patients Say"
+      txtGradient="about us"
       sx={{ mb: { xs: 5, md: 8 }, textAlign: 'center' }}
     />
   );
@@ -104,17 +104,16 @@ export function HomeTestimonials({ sx, ...other }) {
           <Stack key={item.id} component={m.div} variants={varFade().in}>
             <Stack spacing={1} sx={{ typography: 'subtitle2' }}>
               <Rating size="small" name="read-only" value={item.rating} precision={0.5} readOnly />
-              {item.category}
+              {item.content}
             </Stack>
 
             <Typography
               sx={{ ...maxLine({ line: 4, persistent: theme.typography.body1 }), mt: 2, mb: 3 }}
             >
-              {item.content}
+              {item.category}
             </Typography>
 
-            <Stack direction="row" alignItems="center" spacing={2}>
-              <Avatar alt={item.name} src={item.avatar} sx={{ width: 48, height: 48 }} />
+            <Stack direction="row" alignItems="center" spacing={-5}>
               <Stack sx={{ typography: 'subtitle1' }}>
                 <Box component="span">{item.name}</Box>
                 <Box component="span" sx={{ typography: 'body2', color: 'text.disabled' }}>
@@ -221,57 +220,108 @@ const base = (index) => ({
   avatar: _mock.image.avatar(index),
   rating: 5,
 });
-
 const TESTIMONIALS = [
   {
-    ...base(1),
-    category: 'Design Quality',
-    content: `The quality of this template is very good, the TypeScript files are neat and the communication with the team behind this template is very good! I would recommend this template for any kind of project, as they implement new features every now and then and enhance their design. I will definitely be using more templates from this team and re-purchasing this template for other projects.`,
-    postedAt: 'April 20, 2024 23:15:30',
-  },
-  {
-    ...base(2),
-    category: 'Design Quality',
-    content: `Amazing. I've never purchased complete front ends before, but I'll definitely be doing this again!`,
-    postedAt: 'March 19, 2024 23:15:30',
-  },
-  {
-    ...base(3),
-    category: 'Code Quality',
-    content: `Clean & Complete (Design & Code). Thansk Minimal team :)`,
-    postedAt: 'April 19, 2023 23:15:30',
-  },
-  {
-    ...base(4),
-    category: 'Customer Support',
-    content: `Thanks to Minimal for customer support with email. I solved the problem. And the code quality is good, too.`,
-    postedAt: 'May 19, 2023 23:15:30',
-  },
-  {
-    ...base(5),
-    category: 'Customer Support',
+    id: 9,
+    name: 'Aarti Kulkarni',
+    avatarUrl: '/avatars/avatar_9.jpg',
+    category: 'Dermatology',
     content:
-      'Great UI kit, really beautiful as well. Also the customer support is very warm-hearted. However, I hope the components and themes can be provided as a separated project (package).',
-    postedAt: 'June 19, 2023 23:15:30',
+      'Skin allergy ke liye gayi thi, doctor explained allergy reasons and gave proper cream. Reception thoda slow tha but overall satisfied.',
+    rating: 5,
+    postedAt: 'May 24, 2024 16:40:00',
   },
   {
-    ...base(6),
-    category: 'Design Quality',
-    content: 'I would never have been able to create all these beautifull components myself!',
-    postedAt: 'July 19, 2023 23:15:30',
-  },
-  {
-    ...base(7),
-    category: 'Code Quality',
+    id: 10,
+    name: 'Nikhil Bhosale',
+    avatarUrl: '/avatars/avatar_10.jpg',
+    category: 'ENT',
     content:
-      'The quality of this template is excellent. However, as an individual, the cost of obtaining the TypeScript Source version is beyond my means. Despite my strong desire to acquire it, my limited personal budget does not allow me to do so.',
-    postedAt: 'August 19, 2023 23:15:30',
+      'Ear pain tha kaafi din se. ENT specialist ne simple cleaning se relief diya. No unnecessary tests. Good honest staff.',
+    rating: 4.7,
+    postedAt: 'June 01, 2024 11:55:00',
   },
   {
-    ...base(8),
-    category: 'Customizability',
+    id: 11,
+    name: 'Reshma Gaikwad',
+    avatarUrl: '/avatars/avatar_11.jpg',
+    category: 'Pediatrics',
     content:
-      'The design and code quality are impressive. Regular updates and excellent customer support are major advantages.',
-    postedAt: 'September 19, 2023 23:15:30',
+      'My son had high fever. Pediatric dept is clean and colorful. Doctor was polite and medicines worked fast.',
+    rating: 5,
+    postedAt: 'June 06, 2024 14:10:00',
+  },
+  {
+    id: 12,
+    name: 'Vikram Naik',
+    avatarUrl: '/avatars/avatar_12.jpg',
+    category: 'Dental',
+    content:
+      'Tooth extraction was done smoothly. Doctor used laser tool which made it painless. Appointment wait time is there but worth it.',
+    rating: 4.5,
+    postedAt: 'June 13, 2024 18:25:00',
+  },
+  {
+    id: 13,
+    name: 'Shital Rane',
+    avatarUrl: '/avatars/avatar_13.jpg',
+    category: 'Physiotherapy',
+    content:
+      'Post-surgery physio helped me walk again in 4 weeks. Therapist was very motivating. Water cooler was not working though.',
+    rating: 5,
+    postedAt: 'June 19, 2024 08:35:00',
+  },
+  {
+    id: 14,
+    name: 'Harshal Dhole',
+    avatarUrl: '/avatars/avatar_14.jpg',
+    category: 'Nephrology',
+    content:
+      "My uncle's dialysis sessions handled professionally. Nurses are attentive. Billing system can be faster.",
+    rating: 4.7,
+    postedAt: 'June 25, 2024 21:00:00',
+  },
+  {
+    id: 15,
+    name: 'Pooja Gokhale',
+    avatarUrl: '/avatars/avatar_15.jpg',
+    category: 'Radiology',
+    content:
+      'Went for MRI scan. Very clean lab and no delay. Staff explained calmly and helped reduce fear.',
+    rating: 4.6,
+    postedAt: 'July 01, 2024 12:50:00',
+  },
+  {
+    id: 16,
+    name: 'Sagar Phadke',
+    avatarUrl: '/avatars/avatar_16.jpg',
+    category: 'Urology',
+    content:
+      'Doctor was very clear and gave 2nd opinion which saved surgery. Appreciate honest feedback.',
+    rating: 4.8,
+    postedAt: 'July 05, 2024 15:05:00',
+  },
+  {
+    id: 17,
+    name: 'Neha Wagh',
+    avatarUrl: '/avatars/avatar_17.jpg',
+    category: 'Gastroenterology',
+    content:
+      'Consulted for acidity and digestion issues. Doctor prescribed lifestyle changes, no heavy meds. Good experience.',
+    rating: 4.4,
+    postedAt: 'July 11, 2024 09:15:00',
+  },
+  {
+    id: 18,
+    name: 'Rohan Jagtap',
+    avatarUrl: '/avatars/avatar_18.jpg',
+    category: 'Psychiatry',
+    content:
+      'Initially hesitant but counselor made me feel comfortable. Good follow-up system and peaceful setup.',
+    rating: 4.9,
+    postedAt: 'July 15, 2024 19:45:00',
   },
 ];
+
+
+

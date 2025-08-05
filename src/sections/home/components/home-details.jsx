@@ -52,10 +52,7 @@ export function HomeDetails({ sx, ...other }) {
             advanced diagnostics and round-the-clock emergency care in Tathawade, Pune.
           </Box>
           <Box component="span" sx={{ color: 'text.disabled' }}>
-            <br />
-            Professional intellectual capital without enterprise users Seamlessly matrix value
-            e-commerce
-            <br />
+            Your health, our priority — 24/7 expert care you can trust.
           </Box>
         </>
       }

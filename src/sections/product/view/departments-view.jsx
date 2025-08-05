@@ -6,19 +6,18 @@ import Typography from '@mui/material/Typography';
 import { useBoolean } from 'src/hooks/use-boolean';
 import { useDebounce } from 'src/hooks/use-debounce';
 import { useSetState } from 'src/hooks/use-set-state';
-
+import {DepartmentInner} from 'src/sections/about/inner-department'
 import { orderBy } from 'src/utils/helper';
 
 import { useSearchProducts } from 'src/actions/product';
 
 import { EmptyContent } from 'src/components/empty-content';
 
-import { AboutTeamInner } from 'src/sections/about/about-team-inner';
 import { useCheckoutContext } from '../../checkout/context';
 
 // ----------------------------------------------------------------------
 
-export function ProductShopView({ products, loading }) {
+export function DepartmentView({ products, loading }) {
   const checkout = useCheckoutContext();
 
   const openFilters = useBoolean();
@@ -66,11 +65,11 @@ export function ProductShopView({ products, loading }) {
   return (
     <Container sx={{ mb: 15 }}>
       <Typography variant="h4" sx={{ my: { xs: 3, md: 5 } }}>
-        Doctors
+        Departments
       </Typography>
 
       {(notFound || productsEmpty) && renderNotFound}
-      <AboutTeamInner />
+      <DepartmentInner />
     </Container>
   );
 }

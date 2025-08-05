@@ -64,7 +64,7 @@ export function DashboardLayout({ sx, children, data }) {
             disableElevation={isNavVertical}
             onOpenNav={mobileNavOpen.onTrue}
             data={{
-              nav: navData,
+              // nav: navData,
               langs: allLangs,
               account: _account,
               contacts: _contacts,
